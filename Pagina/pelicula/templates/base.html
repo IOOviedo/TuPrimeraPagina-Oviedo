@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Titulo pagina {% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="{% url 'peliculas' %}">Peliculas</a></li>
+                <li><a href="{% url 'elenco' %}">Elenco</a></li>
+                <li><a href="{% url 'musica' %}">Musica</a></li>
+                <li><a href="{% url 'pelicula_formulario' %}">Añadir pelicula</a></li>
+                <li><a href="{% url 'elenco_formulario' %}">Añadir integrante del elenco</a></li>
+                <li><a href="{% url 'musica_formulario' %}">Añadir cancion perteneciente a la banda sonora</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>Este es el footer</p>
+    </footer>
+</body>
+</html>

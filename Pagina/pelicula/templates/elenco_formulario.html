@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Listado del elenco{% endblock %}
+
+{% block content %}
+    <h1>Nueva intergante del elenco</h1>
+
+    <form action="{% url 'elenco_formulario' %}" method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="sumbit">Enviar</button>
+{% endblock %}

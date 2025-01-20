@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Listado del elenco{% endblock %}
+
+{% block content %}
+<h1>Listado del elenco</h1>
+<ul>
+    {% for elenco in elenco %}
+    <li> {{elenco.nombre}} {{elenco.apellido}} </li>
+    {% endfor %}
+</ul>
+{% endblock %}

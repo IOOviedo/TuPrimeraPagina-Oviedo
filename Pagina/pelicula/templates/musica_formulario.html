@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Listado de banda sonora{% endblock %}
+
+{% block content %}
+    <h1>Nueva cancion perteneciente a la banda sonora</h1>
+
+    <form action="{% url 'musica_formulario' %}" method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="sumbit">Enviar</button>
+{% endblock %}
