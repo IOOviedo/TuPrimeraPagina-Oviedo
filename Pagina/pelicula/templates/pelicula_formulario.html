@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Listado de peliculas{% endblock %}
+
+{% block content %}
+    <h1>Nueva pelicula</h1>
+
+    <form action="{% url 'pelicula_formulario' %}" method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="sumbit">Enviar</button>
+{% endblock %}
